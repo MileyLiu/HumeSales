@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01EAA46E57B983F19A43FB41 /* Pods_Hume_SalesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084E65C718A6BFD486A746E9 /* Pods_Hume_SalesUITests.framework */; };
 		1649675520048E1200B84D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649675420048E1200B84D21 /* AppDelegate.swift */; };
 		1649675720048E1200B84D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649675620048E1200B84D21 /* ViewController.swift */; };
 		1649675A20048E1200B84D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1649675820048E1200B84D21 /* Main.storyboard */; };
@@ -14,6 +15,23 @@
 		1649675F20048E1200B84D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1649675D20048E1200B84D21 /* LaunchScreen.storyboard */; };
 		1649676A20048E1200B84D21 /* Hume_SalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649676920048E1200B84D21 /* Hume_SalesTests.swift */; };
 		1649677520048E1200B84D21 /* Hume_SalesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649677420048E1200B84D21 /* Hume_SalesUITests.swift */; };
+		164967832005762300B84D21 /* CatogeryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164967822005762300B84D21 /* CatogeryViewController.swift */; };
+		1649678520058EB500B84D21 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649678420058EB500B84D21 /* CategoryCollectionViewCell.swift */; };
+		164967872005B5AC00B84D21 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164967862005B5AC00B84D21 /* Category.swift */; };
+		16D502B12005CFDC00E878C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502B02005CFDC00E878C5 /* LoginViewController.swift */; };
+		16D502B42006BDD900E878C5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502B32006BDD900E878C5 /* SignupViewController.swift */; };
+		16D502B62006BDEF00E878C5 /* ResetPswViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502B52006BDEF00E878C5 /* ResetPswViewController.swift */; };
+		16D502BA2006CA3F00E878C5 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502B92006CA3F00E878C5 /* QuoteViewController.swift */; };
+		16D502BC2006CE8400E878C5 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502BB2006CE8400E878C5 /* QuoteTableViewCell.swift */; };
+		16D502BF2006E46900E878C5 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502BE2006E46900E878C5 /* TaskTableViewCell.swift */; };
+		16D502C12006E48A00E878C5 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C02006E48A00E878C5 /* TaskViewController.swift */; };
+		16D502C32006E64500E878C5 /* KeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C22006E64500E878C5 /* KeyboardTextField.swift */; };
+		16D502C52006E6F900E878C5 /* Contant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C42006E6F900E878C5 /* Contant.swift */; };
+		16D502C720070B9400E878C5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C620070B9400E878C5 /* MeViewController.swift */; };
+		16D502CA2007163F00E878C5 /* MyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C92007163F00E878C5 /* MyProfileTableViewCell.swift */; };
+		16D502CC200716C700E878C5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502CB200716C700E878C5 /* ImageTableViewCell.swift */; };
+		A7588BFA87D613CFBBACB92A /* Pods_Hume_Sales.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */; };
+		FB2FAAC9ABCDDC25FB822665 /* Pods_Hume_SalesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		084E65C718A6BFD486A746E9 /* Pods_Hume_SalesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hume_SalesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10490127DF4BE3570EECF6A5 /* Pods-Hume SalesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1649675120048E1200B84D21 /* Hume Sales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hume Sales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1649675420048E1200B84D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1649675620048E1200B84D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +67,28 @@
 		1649677020048E1200B84D21 /* Hume SalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hume SalesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1649677420048E1200B84D21 /* Hume_SalesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hume_SalesUITests.swift; sourceTree = "<group>"; };
 		1649677620048E1200B84D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		164967822005762300B84D21 /* CatogeryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogeryViewController.swift; sourceTree = "<group>"; };
+		1649678420058EB500B84D21 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		164967862005B5AC00B84D21 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		16D502B02005CFDC00E878C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		16D502B32006BDD900E878C5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		16D502B52006BDEF00E878C5 /* ResetPswViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPswViewController.swift; sourceTree = "<group>"; };
+		16D502B92006CA3F00E878C5 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		16D502BB2006CE8400E878C5 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		16D502BE2006E46900E878C5 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		16D502C02006E48A00E878C5 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		16D502C22006E64500E878C5 /* KeyboardTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTextField.swift; sourceTree = "<group>"; };
+		16D502C42006E6F900E878C5 /* Contant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contant.swift; sourceTree = "<group>"; };
+		16D502C620070B9400E878C5 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		16D502C92007163F00E878C5 /* MyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewCell.swift; sourceTree = "<group>"; };
+		16D502CB200716C700E878C5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		3DDCDFA9B291454354AE3894 /* Pods-Hume SalesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D635656E995F40FB6E95F9F /* Pods-Hume Sales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume Sales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales.debug.xcconfig"; sourceTree = "<group>"; };
+		85B73AD14486855777CF46EA /* Pods-Hume SalesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hume_SalesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hume_Sales.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D793EC8C071CF912F279893A /* Pods-Hume Sales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume Sales.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales.release.xcconfig"; sourceTree = "<group>"; };
+		F4D162FD1D52C4E22F362B9C /* Pods-Hume SalesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7588BFA87D613CFBBACB92A /* Pods_Hume_Sales.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2FAAC9ABCDDC25FB822665 /* Pods_Hume_SalesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EAA46E57B983F19A43FB41 /* Pods_Hume_SalesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +126,8 @@
 				1649676820048E1200B84D21 /* Hume SalesTests */,
 				1649677320048E1200B84D21 /* Hume SalesUITests */,
 				1649675220048E1200B84D21 /* Products */,
+				C87F6CCE7548F86558DBE53F /* Pods */,
+				A1CCA5136A7B996AA0158B0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +148,13 @@
 				1649675620048E1200B84D21 /* ViewController.swift */,
 				1649675820048E1200B84D21 /* Main.storyboard */,
 				1649675B20048E1200B84D21 /* Assets.xcassets */,
+				16D502B22006BDA900E878C5 /* Login */,
+				16D502B72006C96900E878C5 /* Category */,
+				16D502B82006C9EB00E878C5 /* Quote */,
+				16D502BD2006E44D00E878C5 /* Task */,
+				16D502C820070BBA00E878C5 /* Me */,
+				16D502C22006E64500E878C5 /* KeyboardTextField.swift */,
+				16D502C42006E6F900E878C5 /* Contant.swift */,
 				1649675D20048E1200B84D21 /* LaunchScreen.storyboard */,
 				1649676020048E1200B84D21 /* Info.plist */,
 			);
@@ -125,6 +179,77 @@
 			path = "Hume SalesUITests";
 			sourceTree = "<group>";
 		};
+		16D502B22006BDA900E878C5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				16D502B02005CFDC00E878C5 /* LoginViewController.swift */,
+				16D502B32006BDD900E878C5 /* SignupViewController.swift */,
+				16D502B52006BDEF00E878C5 /* ResetPswViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		16D502B72006C96900E878C5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1649678420058EB500B84D21 /* CategoryCollectionViewCell.swift */,
+				164967822005762300B84D21 /* CatogeryViewController.swift */,
+				164967862005B5AC00B84D21 /* Category.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		16D502B82006C9EB00E878C5 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				16D502B92006CA3F00E878C5 /* QuoteViewController.swift */,
+				16D502BB2006CE8400E878C5 /* QuoteTableViewCell.swift */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
+		16D502BD2006E44D00E878C5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				16D502BE2006E46900E878C5 /* TaskTableViewCell.swift */,
+				16D502C02006E48A00E878C5 /* TaskViewController.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		16D502C820070BBA00E878C5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				16D502C620070B9400E878C5 /* MeViewController.swift */,
+				16D502C92007163F00E878C5 /* MyProfileTableViewCell.swift */,
+				16D502CB200716C700E878C5 /* ImageTableViewCell.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		A1CCA5136A7B996AA0158B0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */,
+				95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */,
+				084E65C718A6BFD486A746E9 /* Pods_Hume_SalesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C87F6CCE7548F86558DBE53F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D635656E995F40FB6E95F9F /* Pods-Hume Sales.debug.xcconfig */,
+				D793EC8C071CF912F279893A /* Pods-Hume Sales.release.xcconfig */,
+				3DDCDFA9B291454354AE3894 /* Pods-Hume SalesTests.debug.xcconfig */,
+				F4D162FD1D52C4E22F362B9C /* Pods-Hume SalesTests.release.xcconfig */,
+				10490127DF4BE3570EECF6A5 /* Pods-Hume SalesUITests.debug.xcconfig */,
+				85B73AD14486855777CF46EA /* Pods-Hume SalesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1649677920048E1200B84D21 /* Build configuration list for PBXNativeTarget "Hume Sales" */;
 			buildPhases = (
+				6988947BEA47397609D2E235 /* [CP] Check Pods Manifest.lock */,
 				1649674D20048E1200B84D21 /* Sources */,
 				1649674E20048E1200B84D21 /* Frameworks */,
 				1649674F20048E1200B84D21 /* Resources */,
+				4417A363D65DCD11090C9F14 /* [CP] Embed Pods Frameworks */,
+				8D3480DD215119E29254E4A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1649677C20048E1200B84D21 /* Build configuration list for PBXNativeTarget "Hume SalesTests" */;
 			buildPhases = (
+				8C12A5FB5420895405C05571 /* [CP] Check Pods Manifest.lock */,
 				1649676120048E1200B84D21 /* Sources */,
 				1649676220048E1200B84D21 /* Frameworks */,
 				1649676320048E1200B84D21 /* Resources */,
+				97458E9AA005F85413B0D49D /* [CP] Embed Pods Frameworks */,
+				93316A17F607B9CD9231815F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +298,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1649677F20048E1200B84D21 /* Build configuration list for PBXNativeTarget "Hume SalesUITests" */;
 			buildPhases = (
+				25E37AB885F0252950EA872B /* [CP] Check Pods Manifest.lock */,
 				1649676C20048E1200B84D21 /* Sources */,
 				1649676D20048E1200B84D21 /* Frameworks */,
 				1649676E20048E1200B84D21 /* Resources */,
+				C985B6111677889C921F95D4 /* [CP] Embed Pods Frameworks */,
+				E7F7B81E80640B9EA955A55D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +388,183 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25E37AB885F0252950EA872B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hume SalesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4417A363D65DCD11090C9F14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6988947BEA47397609D2E235 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hume Sales-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C12A5FB5420895405C05571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hume SalesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D3480DD215119E29254E4A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93316A17F607B9CD9231815F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97458E9AA005F85413B0D49D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C985B6111677889C921F95D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F7B81E80640B9EA955A55D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1649674D20048E1200B84D21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D502C720070B9400E878C5 /* MeViewController.swift in Sources */,
+				16D502CA2007163F00E878C5 /* MyProfileTableViewCell.swift in Sources */,
+				16D502B12005CFDC00E878C5 /* LoginViewController.swift in Sources */,
+				16D502C32006E64500E878C5 /* KeyboardTextField.swift in Sources */,
+				16D502B42006BDD900E878C5 /* SignupViewController.swift in Sources */,
+				16D502BF2006E46900E878C5 /* TaskTableViewCell.swift in Sources */,
+				1649678520058EB500B84D21 /* CategoryCollectionViewCell.swift in Sources */,
+				16D502BA2006CA3F00E878C5 /* QuoteViewController.swift in Sources */,
+				16D502C12006E48A00E878C5 /* TaskViewController.swift in Sources */,
+				16D502BC2006CE8400E878C5 /* QuoteTableViewCell.swift in Sources */,
+				16D502B62006BDEF00E878C5 /* ResetPswViewController.swift in Sources */,
+				164967872005B5AC00B84D21 /* Category.swift in Sources */,
 				1649675720048E1200B84D21 /* ViewController.swift in Sources */,
+				16D502C52006E6F900E878C5 /* Contant.swift in Sources */,
+				164967832005762300B84D21 /* CatogeryViewController.swift in Sources */,
+				16D502CC200716C700E878C5 /* ImageTableViewCell.swift in Sources */,
 				1649675520048E1200B84D21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +729,13 @@
 		};
 		1649677A20048E1200B84D21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D635656E995F40FB6E95F9F /* Pods-Hume Sales.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XKF7ZYL3RU;
 				INFOPLIST_FILE = "Hume Sales/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MileyLiu.Hume-Sales";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +746,13 @@
 		};
 		1649677B20048E1200B84D21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D793EC8C071CF912F279893A /* Pods-Hume Sales.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XKF7ZYL3RU;
 				INFOPLIST_FILE = "Hume Sales/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MileyLiu.Hume-Sales";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +763,7 @@
 		};
 		1649677D20048E1200B84D21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDCDFA9B291454354AE3894 /* Pods-Hume SalesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +781,7 @@
 		};
 		1649677E20048E1200B84D21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D162FD1D52C4E22F362B9C /* Pods-Hume SalesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +799,7 @@
 		};
 		1649678020048E1200B84D21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10490127DF4BE3570EECF6A5 /* Pods-Hume SalesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +816,7 @@
 		};
 		1649678120048E1200B84D21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85B73AD14486855777CF46EA /* Pods-Hume SalesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
