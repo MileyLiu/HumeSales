@@ -345,7 +345,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3338.4000000000001" y="-300"/>
+            <point key="canvasLocation" x="3249" y="-289"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="q8y-Jr-CuK">
