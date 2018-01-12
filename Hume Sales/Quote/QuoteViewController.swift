@@ -17,66 +17,69 @@ class QuoteViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.QuoteTableView.delegate = self
         self.QuoteTableView.dataSource = self
         
-        //创建一个重用单元格
-        
-//        self.QuoteTableView.register(QuoteTableViewCell.self, forCellReuseIdentifier: "quoteCell")
-//
-//        监听键盘弹出通知
-        NotificationCenter.default
-            .addObserver(self,selector: #selector(keyboardWillShow(_:)),
-                         name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        //监听键盘隐藏通知
-        NotificationCenter.default
-            .addObserver(self,selector: #selector(keyboardWillHide(_:)),
-                         name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
-//
-////
+  
         //添加一个UITableViewController
-        let tableVC = UITableViewController.init(style: .plain)
+        let tableVC = UITableViewController.init(style: .grouped)
         tableVC.tableView = self.QuoteTableView
         self.addChildViewController(tableVC)
 
         // Do any additional setup after loading the view.
+        
+        
+//        //监听键盘弹出通知
+//        NotificationCenter.default
+//            .addObserver(self,selector: #selector(keyboardWillShow(_:)),
+//                         name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        //监听键盘隐藏通知
+//        NotificationCenter.default
+//            .addObserver(self,selector: #selector(keyboardWillHide(_:)),
+//                         name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 20
+        
+        if section == 0 {
+            return 3
+        }
+        else {
+            
+            return 17
+        }
     }
     
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") as! QuoteTableViewCell
-    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as! QuoteTableViewCell
-        
-        
-        cell.itemNameLabel.text = "ItemName\(indexPath.row)"
-        cell.itemContentTextField.attributedPlaceholder =  NSAttributedString(string: "ItemContent\(indexPath.row)",
-                                                                              attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        
-        cell.itemContentTextField.tag = indexPath.row
-        
-        cell.itemContentTextField.delegate = self
-//        cell.itemContentTextField.delegate = self
-        cell.nextIndex =  cell.itemContentTextField.tag + 1
-        
-    
+            let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") as! QuoteTableViewCell
+
+
+            cell.itemNameLabel.text = "ItemName\(indexPath.section)-\(indexPath.row)"
+            cell.itemContentTextField.attributedPlaceholder =  NSAttributedString(string: "Tap Here",
+                                                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+
+            cell.itemContentTextField.tag = indexPath.row
+            cell.itemContentTextField.delegate = self
+
+            cell.nextIndex =  cell.itemContentTextField.tag + 1
+
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return "Basic Info"
-//
-//        default:
-//            return "Order Detail"
-//        }
-//    }
+    
+   
+    
+    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 0 {
+            return "Basic Info"
+        }
+        else {
+            
+            return "Order Detail"
+        }
+    }
     
     
     
@@ -114,7 +117,17 @@ class QuoteViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+        textField.textColor = mainColor
+    }
+    
+   
 //    func textFieldDidEndEditing(_ textField: UITextField) {
 //
 //

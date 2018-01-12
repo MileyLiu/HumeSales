@@ -24,15 +24,8 @@ class QuoteTableViewCell: UITableViewCell,UITextFieldDelegate{
     }
     
     
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style:style, reuseIdentifier: reuseIdentifier)
-//
-//        //init
-//
-//        self.itemContentTextField.delegate = self
-//        self.itemContentTextField.configKeyboard()
-//
-//    }
+    
+   
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("next item:\(nextIndex)")

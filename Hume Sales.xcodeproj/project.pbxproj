@@ -30,6 +30,11 @@
 		16D502C720070B9400E878C5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C620070B9400E878C5 /* MeViewController.swift */; };
 		16D502CA2007163F00E878C5 /* MyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502C92007163F00E878C5 /* MyProfileTableViewCell.swift */; };
 		16D502CC200716C700E878C5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502CB200716C700E878C5 /* ImageTableViewCell.swift */; };
+		16D502CE20083F9600E878C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D502CD20083F9600E878C5 /* CoreLocation.framework */; };
+		16D502D0200867E800E878C5 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502CF200867E800E878C5 /* ProductsListViewController.swift */; };
+		16D502D22008680600E878C5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D12008680600E878C5 /* Product.swift */; };
+		16D502D420086DFE00E878C5 /* Button+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D320086DFE00E878C5 /* Button+Image.swift */; };
+		16D502D8200878A200E878C5 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D7200878A200E878C5 /* ProductCollectionViewCell.swift */; };
 		A7588BFA87D613CFBBACB92A /* Pods_Hume_Sales.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */; };
 		FB2FAAC9ABCDDC25FB822665 /* Pods_Hume_SalesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +87,11 @@
 		16D502C620070B9400E878C5 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		16D502C92007163F00E878C5 /* MyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewCell.swift; sourceTree = "<group>"; };
 		16D502CB200716C700E878C5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		16D502CD20083F9600E878C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		16D502CF200867E800E878C5 /* ProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		16D502D12008680600E878C5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		16D502D320086DFE00E878C5 /* Button+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Image.swift"; sourceTree = "<group>"; };
+		16D502D7200878A200E878C5 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		3DDCDFA9B291454354AE3894 /* Pods-Hume SalesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D635656E995F40FB6E95F9F /* Pods-Hume Sales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume Sales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales.debug.xcconfig"; sourceTree = "<group>"; };
 		85B73AD14486855777CF46EA /* Pods-Hume SalesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D502CE20083F9600E878C5 /* CoreLocation.framework in Frameworks */,
 				A7588BFA87D613CFBBACB92A /* Pods_Hume_Sales.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +158,7 @@
 				1649675420048E1200B84D21 /* AppDelegate.swift */,
 				1649675620048E1200B84D21 /* ViewController.swift */,
 				1649675820048E1200B84D21 /* Main.storyboard */,
+				16D502D320086DFE00E878C5 /* Button+Image.swift */,
 				1649675B20048E1200B84D21 /* Assets.xcassets */,
 				16D502B22006BDA900E878C5 /* Login */,
 				16D502B72006C96900E878C5 /* Category */,
@@ -195,6 +207,9 @@
 				1649678420058EB500B84D21 /* CategoryCollectionViewCell.swift */,
 				164967822005762300B84D21 /* CatogeryViewController.swift */,
 				164967862005B5AC00B84D21 /* Category.swift */,
+				16D502CF200867E800E878C5 /* ProductsListViewController.swift */,
+				16D502D12008680600E878C5 /* Product.swift */,
+				16D502D7200878A200E878C5 /* ProductCollectionViewCell.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 		A1CCA5136A7B996AA0158B0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16D502CD20083F9600E878C5 /* CoreLocation.framework */,
 				CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */,
 				95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */,
 				084E65C718A6BFD486A746E9 /* Pods_Hume_SalesUITests.framework */,
@@ -549,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D502D22008680600E878C5 /* Product.swift in Sources */,
 				16D502C720070B9400E878C5 /* MeViewController.swift in Sources */,
 				16D502CA2007163F00E878C5 /* MyProfileTableViewCell.swift in Sources */,
 				16D502B12005CFDC00E878C5 /* LoginViewController.swift in Sources */,
@@ -557,11 +574,14 @@
 				16D502BF2006E46900E878C5 /* TaskTableViewCell.swift in Sources */,
 				1649678520058EB500B84D21 /* CategoryCollectionViewCell.swift in Sources */,
 				16D502BA2006CA3F00E878C5 /* QuoteViewController.swift in Sources */,
+				16D502D0200867E800E878C5 /* ProductsListViewController.swift in Sources */,
 				16D502C12006E48A00E878C5 /* TaskViewController.swift in Sources */,
 				16D502BC2006CE8400E878C5 /* QuoteTableViewCell.swift in Sources */,
 				16D502B62006BDEF00E878C5 /* ResetPswViewController.swift in Sources */,
 				164967872005B5AC00B84D21 /* Category.swift in Sources */,
 				1649675720048E1200B84D21 /* ViewController.swift in Sources */,
+				16D502D420086DFE00E878C5 /* Button+Image.swift in Sources */,
+				16D502D8200878A200E878C5 /* ProductCollectionViewCell.swift in Sources */,
 				16D502C52006E6F900E878C5 /* Contant.swift in Sources */,
 				164967832005762300B84D21 /* CatogeryViewController.swift in Sources */,
 				16D502CC200716C700E878C5 /* ImageTableViewCell.swift in Sources */,
