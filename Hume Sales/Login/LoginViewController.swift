@@ -20,25 +20,28 @@ class LoginViewController: UIViewController {
         self.bgImageView.image = UIImage(named:"bg")
         self.loginButton.layer.cornerRadius = 10
         
-        self.emailTextField.leftViewMode = .always
-        self.emailTextField.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
-        //TODO REMOVE FOR REAL
-        self.emailTextField.text = sampleEmail
+      
         
-        
-        self.passwordTextField.leftViewMode = .always
-        self.passwordTextField.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
-        
-        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Email address",
-                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-    
-        
-        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        
-        
+//        self.emailTextField.leftViewMode = .always
+//        self.emailTextField.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
+//        //TODO REMOVE FOR REAL
+//        self.emailTextField.text = sampleEmail
+//        
+//        self.passwordTextField.leftViewMode = .always
+//        self.passwordTextField.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
+//        
+//        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Email address",
+//                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        
+//    
+//        
+//        
+//        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
+//                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        
+//        
+//      
+//        
         self.emailTextField.configKeyboard()
         self.passwordTextField.configKeyboard()
         

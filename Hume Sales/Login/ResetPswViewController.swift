@@ -22,11 +22,11 @@ class ResetPswViewController: UIViewController {
         self.bgView.image = UIImage(named:"bg")
         self.resetBtn.layer.cornerRadius = 10
         
-        self.emailAddressText.leftViewMode = .always
-        self.emailAddressText.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
-        
-        self.emailAddressText.attributedPlaceholder = NSAttributedString(string: "Email address",
-                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        self.emailAddressText.leftViewMode = .always
+//        self.emailAddressText.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
+//        
+//        self.emailAddressText.attributedPlaceholder = NSAttributedString(string: "Email address",
+//                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         
         self.emailAddressText.configKeyboard()
 

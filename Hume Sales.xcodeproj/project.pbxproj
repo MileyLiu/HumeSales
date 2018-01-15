@@ -13,6 +13,7 @@
 		161420C4200C287D00BAAB60 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161420C3200C287D00BAAB60 /* DescriptionTableViewCell.swift */; };
 		161420C6200C2D2C00BAAB60 /* SpecificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161420C5200C2D2C00BAAB60 /* SpecificationTableViewCell.swift */; };
 		161420C9200C4AFC00BAAB60 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161420C8200C4AFC00BAAB60 /* FileTableViewCell.swift */; };
+		161420CB200C772F00BAAB60 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161420CA200C772F00BAAB60 /* DesignableTextField.swift */; };
 		1649675520048E1200B84D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649675420048E1200B84D21 /* AppDelegate.swift */; };
 		1649675720048E1200B84D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1649675620048E1200B84D21 /* ViewController.swift */; };
 		1649675A20048E1200B84D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1649675820048E1200B84D21 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		161420C3200C287D00BAAB60 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		161420C5200C2D2C00BAAB60 /* SpecificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationTableViewCell.swift; sourceTree = "<group>"; };
 		161420C8200C4AFC00BAAB60 /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		161420CA200C772F00BAAB60 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		1649675120048E1200B84D21 /* Hume Sales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hume Sales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1649675420048E1200B84D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1649675620048E1200B84D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				161420C1200C15F500BAAB60 /* MLPhotoGallery.swift */,
 				16D502D320086DFE00E878C5 /* Button+Image.swift */,
 				1649675B20048E1200B84D21 /* Assets.xcassets */,
+				161420CA200C772F00BAAB60 /* DesignableTextField.swift */,
 				16D502B22006BDA900E878C5 /* Login */,
 				16D502B72006C96900E878C5 /* Category */,
 				16D502B82006C9EB00E878C5 /* Quote */,
@@ -600,6 +603,7 @@
 				161420C0200C113700BAAB60 /* ProductDetailViewController.swift in Sources */,
 				161420C2200C15F600BAAB60 /* MLPhotoGallery.swift in Sources */,
 				1649678520058EB500B84D21 /* CategoryCollectionViewCell.swift in Sources */,
+				161420CB200C772F00BAAB60 /* DesignableTextField.swift in Sources */,
 				16D502BA2006CA3F00E878C5 /* QuoteViewController.swift in Sources */,
 				16D502D0200867E800E878C5 /* ProductsListViewController.swift in Sources */,
 				16D502C12006E48A00E878C5 /* TaskViewController.swift in Sources */,

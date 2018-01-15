@@ -19,7 +19,22 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
     
     var subCategory = "All"
     var sort = "price low to High"
+    //DUMMY
     
+    let productImageUrls = ["http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/CORN4ST48-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/BORC100-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10CBM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10SBM2-270x250.jpg",
+                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10REM2-270x250.jpg",
+                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10WRM2-270x250.jpg",
+                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13PERM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13FRM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13SBM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13REM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13WRM2-270x250.jpg",
+                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/16FRM2-270x250.jpg"]
+    
+   let productNames = ["100mm 4 Step Cornice 4800mm 210/pallet","100mm 4 Step Cornice 4800mm 210/pallet","10mm recessed edge ceiling board","10mm recessed edge Sound Proof Plasterboard","10mm recessed edge wall board","10mm recessed edge Water Resistant Plasterboard","13mm Perforated Plasterboard","13mm recessed edge Fire Resistant Plasterboard","13mm recessed edge Sound Proof Plasterboard"]
   
     
     
@@ -46,7 +61,7 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return productNames.count
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,7 +69,7 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath as IndexPath) as! ProductCollectionViewCell
 
-        SDWebImageManager.shared().loadImage(with: URL(string:"http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/CORN4ST48-270x250.jpg") as URL!, options: SDWebImageOptions.continueInBackground, progress: { (receivedSize :Int, ExpectedSize :Int, url : URL) in
+        SDWebImageManager.shared().loadImage(with: URL(string:productImageUrls[indexPath.row]) as URL!, options: SDWebImageOptions.continueInBackground, progress: { (receivedSize :Int, ExpectedSize :Int, url : URL) in
             
             } as? SDWebImageDownloaderProgressBlock, completed: { (image : UIImage?, any : Data?,error : Error?, cacheType : SDImageCacheType, finished : Bool, url : URL?) in
                 
@@ -66,13 +81,14 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
                 else {
                     
                     cell.productImage?.image = image
+                    cell.productImage.contentMode = .scaleToFill
                     
                 }
         })
         
         
     
-        cell.productTitleLabel.text = "100mm 4 Step Cornice 4800mm 210/pallet"
+        cell.productTitleLabel.text = productNames[indexPath.row]
         cell.layer.cornerRadius = 8
         
         return cell
@@ -81,7 +97,7 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
 
     @IBAction func SelectSubCategory(_ sender: Any) {
         
-        let plasterBoard = ["Speciality Plasterboard","General plasterboard","Plaster compounds","Plater cornice &cover"]
+        let plasterBoard = ["All","Speciality Plasterboard","General plasterboard","Plaster compounds","Plater cornice &cover"]
         
         ActionSheetStringPicker.show(withTitle: "Sub Category", rows: plasterBoard, initialSelection: 1, doneBlock: {
             

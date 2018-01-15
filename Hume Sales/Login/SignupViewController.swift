@@ -24,29 +24,29 @@ class SignupViewController: UIViewController {
         self.bgView.image = UIImage(named:"bg")
         self.signupBtn.layer.cornerRadius = 10
         
-        self.emailText.leftViewMode = .always
-        self.emailText.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
-        
-        self.passwordText.leftViewMode = .always
-        self.passwordText.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
-        
-        self.repeatPswText.leftViewMode = .always
-        self.repeatPswText.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
-        
-        
-        
-        self.emailText.attributedPlaceholder = NSAttributedString(string: "Email address",
-                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        
-        
-        self.passwordText.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                          attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        self.repeatPswText.attributedPlaceholder = NSAttributedString(string: "Repeat Password",
-                                                                     attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        
-        
+//        self.emailText.leftViewMode = .always
+//        self.emailText.leftView = UIImageView.init(image: UIImage(named:"icons8-gmail"))
+//        
+//        self.passwordText.leftViewMode = .always
+//        self.passwordText.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
+//        
+//        self.repeatPswText.leftViewMode = .always
+//        self.repeatPswText.leftView =  UIImageView.init(image: UIImage(named:"icons8-password"))
+//        
+//        
+//        
+//        self.emailText.attributedPlaceholder = NSAttributedString(string: "Email address",
+//                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        
+//        
+//        
+//        self.passwordText.attributedPlaceholder = NSAttributedString(string: "Password",
+//                                                                          attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        self.repeatPswText.attributedPlaceholder = NSAttributedString(string: "Repeat Password",
+//                                                                     attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        
+//        
+//        
         
         self.passwordText.configKeyboard()
         
