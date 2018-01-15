@@ -459,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KB7-6z-MBz">
-                                <rect key="frame" x="0.0" y="118" width="375" height="581"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sliderCell" rowHeight="200" id="cH0-8O-ky4">
@@ -544,13 +544,30 @@
                                             <outlet property="speTitleLabel" destination="ZUJ-I1-sSa" id="f9m-Mt-j5q"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fillCell" rowHeight="39" id="e2h-oc-nwf">
-                                        <rect key="frame" x="0.0" y="429" width="375" height="39"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileCell" rowHeight="73" id="e2h-oc-nwf" customClass="FileTableViewCell" customModule="Hume_Sales" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="429" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e2h-oc-nwf" id="LOG-tu-JvP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFd-g2-m2B">
+                                                    <rect key="frame" x="15" y="15" width="345" height="42.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="FFd-g2-m2B" secondAttribute="trailing" constant="15" id="9Fr-g4-PxE"/>
+                                                <constraint firstAttribute="bottom" secondItem="FFd-g2-m2B" secondAttribute="bottom" constant="15" id="ZNe-Rq-Bqc"/>
+                                                <constraint firstItem="FFd-g2-m2B" firstAttribute="top" secondItem="LOG-tu-JvP" secondAttribute="top" constant="15" id="flj-QN-XWM"/>
+                                                <constraint firstItem="FFd-g2-m2B" firstAttribute="leading" secondItem="LOG-tu-JvP" secondAttribute="leading" constant="15" id="tfM-xn-4Gk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fileNameLabel" destination="FFd-g2-m2B" id="y0N-Hu-uDq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -576,7 +593,7 @@
                             <constraint firstItem="gTh-W3-Sv9" firstAttribute="leading" secondItem="9hv-lG-5a5" secondAttribute="leading" id="HWy-Bb-90D"/>
                             <constraint firstItem="9hv-lG-5a5" firstAttribute="trailing" secondItem="gTh-W3-Sv9" secondAttribute="trailing" id="Lot-zE-dJD"/>
                             <constraint firstItem="KB7-6z-MBz" firstAttribute="width" secondItem="HYJ-F4-qry" secondAttribute="width" id="St3-xq-KsV"/>
-                            <constraint firstItem="KB7-6z-MBz" firstAttribute="bottom" secondItem="9hv-lG-5a5" secondAttribute="bottom" constant="32" id="Zsh-Ca-ZhX"/>
+                            <constraint firstItem="KB7-6z-MBz" firstAttribute="bottom" secondItem="9hv-lG-5a5" secondAttribute="bottom" id="Zsh-Ca-ZhX"/>
                             <constraint firstItem="KB7-6z-MBz" firstAttribute="top" secondItem="gTh-W3-Sv9" secondAttribute="bottom" constant="10" id="nCS-9z-9re"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9hv-lG-5a5"/>

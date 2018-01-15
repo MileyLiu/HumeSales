@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 import ActionSheetPicker_3_0
-
+import SafariServices
 
 class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
 

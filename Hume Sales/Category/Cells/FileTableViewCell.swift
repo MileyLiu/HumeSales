@@ -10,6 +10,8 @@ import UIKit
 
 class FileTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fileNameLabel: UILabel!
+    var fileUrl :String?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
