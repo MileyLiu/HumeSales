@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+import ActionSheetPicker_3_0
+
 
 class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
 
@@ -17,6 +19,10 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
     
     var subCategory = "All"
     var sort = "price low to High"
+    
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +34,9 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
        
         self.productsCollectionView.delegate = self
         self.productsCollectionView.dataSource = self
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -74,12 +83,43 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
         
         let plasterBoard = ["Speciality Plasterboard","General plasterboard","Plaster compounds","Plater cornice &cover"]
         
+        ActionSheetStringPicker.show(withTitle: "Sub Category", rows: plasterBoard, initialSelection: 1, doneBlock: {
+            
+            picker, value, index in
+            
+          self.SubCategoryBtn.set(anImage: UIImage(named:"icons8-sort_down_filled"), title: index as! String, titlePosition: .left, additionalSpacing: 5, state: .normal)
+            
+//            self.pickedBranch = index as! String
+//            self.branchTextField.text =  self.pickedBranch
+            print("pickedBranch:\(index!)")
+            return
+            
+            
+        }, cancel: { ActionStringCancelBlock in return }, origin: sender)
+        
         
         
         
     }
     
     @IBAction func SelectSort(_ sender: Any) {
+        let orderBy = ["Popular","Price low to high","Price high to low","Best-Seller"]
+        
+        
+        
+        ActionSheetStringPicker.show(withTitle: "Order By", rows: orderBy, initialSelection: 1, doneBlock: {
+            
+            picker, value, index in
+            
+            self.OrderBtn.set(anImage: UIImage(named:"icons8-sort_down_filled"), title: index as! String, titlePosition: .left, additionalSpacing: 5, state: .normal)
+            
+            //            self.pickedBranch = index as! String
+            //            self.branchTextField.text =  self.pickedBranch
+            print("pickedBranch:\(index!)")
+            return
+            
+            
+        }, cancel: { ActionStringCancelBlock in return }, origin: sender)
         
         
         
