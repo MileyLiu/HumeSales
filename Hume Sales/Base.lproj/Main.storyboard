@@ -662,6 +662,93 @@
             </objects>
             <point key="canvasLocation" x="3984.8000000000002" y="-298.2008995502249"/>
         </scene>
+        <!--Scan Qr Code View Controller-->
+        <scene sceneID="os5-xE-N4h">
+            <objects>
+                <viewController id="Oc0-w9-AM9" customClass="ScanQrCodeViewController" customModule="Hume_Sales" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNu-gU-O0i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code detective" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UN2-Bs-k1M">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xfX-NS-2HV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHq-Tf-hn3" userLabel="cancel">
+                                <rect key="frame" x="16" y="20" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="KhV-lP-C0c"/>
+                                    <constraint firstAttribute="width" constant="24" id="lQw-Cz-3zy"/>
+                                </constraints>
+                                <state key="normal" image="icons8-cancel"/>
+                                <connections>
+                                    <action selector="Dismiss:" destination="EwS-2E-fec" eventType="touchUpInside" id="l9c-e4-Nfs"/>
+                                    <action selector="close:" destination="Oc0-w9-AM9" eventType="touchUpInside" id="1eA-hb-vra"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LHq-Tf-hn3" firstAttribute="top" secondItem="fGS-8r-Ic9" secondAttribute="top" id="7fL-HJ-Dbs"/>
+                            <constraint firstItem="fGS-8r-Ic9" firstAttribute="trailing" secondItem="UN2-Bs-k1M" secondAttribute="trailing" id="Cly-72-e8n"/>
+                            <constraint firstItem="LHq-Tf-hn3" firstAttribute="leading" secondItem="fGS-8r-Ic9" secondAttribute="leading" constant="16" id="HO0-NQ-0k2"/>
+                            <constraint firstItem="fGS-8r-Ic9" firstAttribute="bottom" secondItem="UN2-Bs-k1M" secondAttribute="bottom" id="Xdw-cY-ShI"/>
+                            <constraint firstItem="UN2-Bs-k1M" firstAttribute="leading" secondItem="fGS-8r-Ic9" secondAttribute="leading" id="vd7-JX-rKd"/>
+                            <constraint firstItem="UN2-Bs-k1M" firstAttribute="width" secondItem="zNu-gU-O0i" secondAttribute="width" id="xa7-5i-B8C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fGS-8r-Ic9"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="LHq-Tf-hn3" id="526-Nw-pcu"/>
+                        <outlet property="messageLabel" destination="UN2-Bs-k1M" id="KP0-Wn-w6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYM-BW-zKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2274" y="812"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="08K-In-geb">
+            <objects>
+                <viewController id="Q0W-zA-XnA" customClass="QRCodeViewController" customModule="Hume_Sales" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G6h-h9-hZs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quick Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-LT-4gg">
+                                <rect key="frame" x="147" y="61" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apJ-d3-neU">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NZA-Xt-EKW"/>
+                                    <constraint firstAttribute="height" constant="200" id="saR-CF-yAB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="focus"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="apJ-d3-neU" firstAttribute="centerY" secondItem="G6h-h9-hZs" secondAttribute="centerY" id="8n3-BI-n75"/>
+                            <constraint firstItem="apJ-d3-neU" firstAttribute="centerX" secondItem="G6h-h9-hZs" secondAttribute="centerX" id="gYw-Ae-hJe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V2N-2x-jeY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNW-Xs-AI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3103" y="833"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="q8y-Jr-CuK">
             <objects>
@@ -700,8 +787,20 @@
                                                 <constraint firstAttribute="height" constant="1" id="b6z-MP-rwk"/>
                                             </constraints>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6O-vX-ZZ1">
+                                            <rect key="frame" x="165.5" y="507" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="8qO-py-DaT"/>
+                                                <constraint firstAttribute="width" constant="44" id="PJM-rU-ylb"/>
+                                            </constraints>
+                                            <state key="normal" image="icons8-qr_code-white"/>
+                                            <connections>
+                                                <segue destination="Oc0-w9-AM9" kind="show" id="0gW-1A-2rX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="j6O-vX-ZZ1" firstAttribute="centerX" secondItem="zog-Nu-fQQ" secondAttribute="centerX" id="Ev0-eY-2Tb"/>
                                         <constraint firstItem="5N3-fC-n03" firstAttribute="centerX" secondItem="zog-Nu-fQQ" secondAttribute="centerX" id="OUL-HF-YOu"/>
                                         <constraint firstItem="h5z-2r-S3z" firstAttribute="centerX" secondItem="zog-Nu-fQQ" secondAttribute="centerX" id="OWn-41-jnx"/>
                                         <constraint firstItem="h5z-2r-S3z" firstAttribute="top" secondItem="zog-Nu-fQQ" secondAttribute="top" constant="88" id="UpL-8G-Qp8"/>
@@ -808,6 +907,7 @@
                             <constraint firstItem="5N3-fC-n03" firstAttribute="top" secondItem="zxo-Oc-o1E" secondAttribute="bottom" id="v3z-NY-zvS"/>
                             <constraint firstItem="OZw-ss-bar" firstAttribute="centerX" secondItem="H14-j0-GpQ" secondAttribute="centerX" id="vI8-zY-TzZ"/>
                             <constraint firstItem="C5L-iE-p5r" firstAttribute="top" secondItem="h5z-2r-S3z" secondAttribute="bottom" constant="64" id="wZv-xp-Hm0"/>
+                            <constraint firstItem="j6O-vX-ZZ1" firstAttribute="top" secondItem="AFT-xg-jTH" secondAttribute="bottom" constant="31" id="xot-K3-cjE"/>
                             <constraint firstItem="OZw-ss-bar" firstAttribute="width" secondItem="H14-j0-GpQ" secondAttribute="width" multiplier="0.7" id="xto-dH-6bN"/>
                             <constraint firstItem="Tt9-B7-LZT" firstAttribute="width" secondItem="C5L-iE-p5r" secondAttribute="width" id="yxS-3A-JzK"/>
                         </constraints>
@@ -823,7 +923,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YuU-Aw-fRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1415" y="44"/>
+            <point key="canvasLocation" x="-1415.2" y="43.628185907046479"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pUE-sH-6gx">
@@ -1340,12 +1440,14 @@
     </scenes>
     <resources>
         <image name="categories" width="24" height="24"/>
+        <image name="focus" width="300" height="300"/>
         <image name="icons8-cancel" width="24" height="24"/>
         <image name="icons8-check" width="24" height="24"/>
         <image name="icons8-edit_user" width="64" height="64"/>
         <image name="icons8-gmail" width="24" height="24"/>
         <image name="icons8-password" width="24" height="24"/>
         <image name="icons8-qr_code" width="24" height="24"/>
+        <image name="icons8-qr_code-white" width="75" height="75"/>
         <image name="icons8-search" width="24" height="24"/>
         <image name="icons8-sent" width="24" height="24"/>
         <image name="icons8-to_do" width="24" height="24"/>

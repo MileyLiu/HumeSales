@@ -52,32 +52,6 @@ extension UITextField{
         self.resignFirstResponder()
     }
     
-//    func setLeftPaddingPoints(_ amount:CGFloat){
-//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-//        self.leftView = paddingView
-//        self.leftViewMode = .always
-//    }
-//    func setRightPaddingPoints(_ amount:CGFloat) {
-//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-//        self.rightView = paddingView
-//        self.rightViewMode = .always
-//    }
-    
-    //    @objc func keyboardWillShow(_ notification: Notification) {
-    //        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-    //            let keyboardRectangle = keyboardFrame.cgRectValue
-    //            keyboardHeight = Double(keyboardRectangle.height)
-    //
-    //
-    //            setKBHeight()
-    //            print("keyboardHeight:\(keyBoardHeight)")
-    //        }
-    //    }
-    
-    //    func setKBHeight(){
-    //
-    //
-    //    }
     
     
     
