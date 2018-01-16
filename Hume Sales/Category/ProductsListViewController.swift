@@ -11,31 +11,33 @@ import SDWebImage
 import ActionSheetPicker_3_0
 import SafariServices
 
-class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
+class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate{
 
     @IBOutlet weak var productsCollectionView: UICollectionView!
     @IBOutlet weak var SubCategoryBtn: UIButton!
     @IBOutlet weak var OrderBtn: UIButton!
     
-    var subCategory = "All"
-    var sort = "price low to High"
+    
+//    var searchBar :UISearchBar?
+    
+    
     //DUMMY
+    var data : NSMutableArray = NSMutableArray()
+//    var productList = [Product]()
+    var searchResult = NSMutableArray()
+//    var productSearchList = [Product]()
     
-    let productImageUrls = ["http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/CORN4ST48-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/BORC100-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10CBM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10SBM2-270x250.jpg",
-                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10REM2-270x250.jpg",
-                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10WRM2-270x250.jpg",
-                             "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13PERM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13FRM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13SBM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13REM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13WRM2-270x250.jpg",
-                            "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/16FRM2-270x250.jpg"]
+    var searchBar = UISearchBar(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: UIScreen.main.bounds.width-44, height: CGFloat(44)))
     
-   let productNames = ["100mm 4 Step Cornice 4800mm 210/pallet","100mm 4 Step Cornice 4800mm 210/pallet","10mm recessed edge ceiling board","10mm recessed edge Sound Proof Plasterboard","10mm recessed edge wall board","10mm recessed edge Water Resistant Plasterboard","13mm Perforated Plasterboard","13mm recessed edge Fire Resistant Plasterboard","13mm recessed edge Sound Proof Plasterboard"]
-  
+    
+//    var searchView = UIView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: UIScreen.main.bounds.width-44, height: CGFloat(44)))
+//
+//    var searchCancelButton = UIButton(frame:CGRect(x: UIScreen.main.bounds.width-100, y: CGFloat(0), width: 60, height: CGFloat(44)))
+//
+
+    
+    var subCategory = "All"
+    var sort = "Price low to High"
     
     
     override func viewDidLoad() {
@@ -50,26 +52,173 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
         self.productsCollectionView.delegate = self
         self.productsCollectionView.dataSource = self
         
+        self.searchBar.delegate = self
         
         
-
+//        productList = dammyData()
+        
+      
+        for product in dammyData(){
+            
+            data.add(product)
+            
+        }
+        
+        print("data.count\(data.count)")
+        
+        
+        
+//
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func searchClicked(_ sender: Any) {
+        
+        
+//        self.searchCancelButton.setTitle("Cancel", for:.normal)
+//         self.searchCancelButton.setTitleColor(mainColor, for: .normal)
+//
+//          self.searchCancelButton.addTarget(self, action: #selector(cancelSearch), for: .touchUpInside)
+//
+//        self.searchView.addSubview(self.searchBar)
+//        self.searchView.addSubview(self.searchCancelButton)
+        
+        
+        
+        searchBar.showsCancelButton = true
+        
+    
+        
+        
+        
+        var rightNavBarItems = UIBarButtonItem(customView:searchBar)
+         self.navigationItem.rightBarButtonItem = rightNavBarItems
+        
+        
+        
+        
+        
+    }
+    
+//
+//    @objc func cancelSearch(){
+//
+//        print("cancelSearch")
+////        self.searchView.isHidden = true
+//
+//        self.searchBar.removeFromSuperview()
+//
+//        self.searchBar.text = ""
+//
+////         searchBar.resignFirstResponder()
+////
+////        self.productsCollectionView.reloadData()
+//
+//    }
+    
+    
+    
+//
+    
+    
+   
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("[ViewController searchBar] searchText: \(searchText)")
+        searchResult = NSMutableArray()
+        
+        for index in 0...self.data.count-1 {
+            
+            let product = data[index] as! Product
+            
+            if product.name.lowercased().contains(searchText.lowercased())
+            {
+                searchResult.add(product)
+            }
+            
+        }
+        
+        
+        self.productsCollectionView.reloadData()
+        
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+         self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchResult = NSMutableArray()
+        self.productsCollectionView.reloadData()
+        self.searchBar.text = ""
+        
+        self.searchBar.resignFirstResponder()
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+      self.searchBar.resignFirstResponder()
+    }
+    
+    
+    
+   
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.searchBar.resignFirstResponder()
+    }
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productNames.count
+//        return productList.count
+        
+        
+        if searchResult.count == 0 && !(self.searchBar.text?.isEmpty)!
+        {
+              print("searchRsult:\(searchResult.count)")
+            return 0
+        }
+        else if searchResult.count != 0{
+            
+            print("productSearchList.count1:\(searchResult.count)")
+            return searchResult.count
+        }
+        else {
+              print("productSearchList.count2:\(searchResult.count)")
+            return self.data.count
+        }
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
+        var product:Product
+        
+        if(self.searchResult.count != 0)
+        {
+            product = self.searchResult[indexPath.row] as! Product
+        }
+        else
+        {
+            product = self.data[indexPath.row] as! Product
+        }
+        
+      
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath as IndexPath) as! ProductCollectionViewCell
+        
 
-        SDWebImageManager.shared().loadImage(with: URL(string:productImageUrls[indexPath.row]) as URL!, options: SDWebImageOptions.continueInBackground, progress: { (receivedSize :Int, ExpectedSize :Int, url : URL) in
+        SDWebImageManager.shared().loadImage(with: URL(string:product.imageURL) as URL!, options: SDWebImageOptions.continueInBackground, progress: { (receivedSize :Int, ExpectedSize :Int, url : URL) in
             
             } as? SDWebImageDownloaderProgressBlock, completed: { (image : UIImage?, any : Data?,error : Error?, cacheType : SDImageCacheType, finished : Bool, url : URL?) in
                 
@@ -88,7 +237,7 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
         
         
     
-        cell.productTitleLabel.text = productNames[indexPath.row]
+        cell.productTitleLabel.text = product.name
         cell.layer.cornerRadius = 8
         
         return cell
@@ -141,12 +290,82 @@ class ProductsListViewController: UIViewController,UICollectionViewDelegate,UICo
         
     }
     
+    
+    func dammyData() ->[Product]{
+        
+        
+    
+        let prodcut1 = Product()
+        prodcut1.name = "100mm 4 Step Cornice 4800mm 210/pallet"
+        prodcut1.imageURL = "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/CORN4ST48-270x250.jpg"
+        
+        
+        let prodcut2 = Product()
+        prodcut2.name = "100mm 4 Step Cornice 4800mm 210/pallet"
+        prodcut2.imageURL = "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/BORC100-270x250.jpg"
+        
+        
+        
+        let prodcut3 = Product()
+        prodcut3.name = "10mm recessed edge ceiling board"
+        prodcut3.imageURL =  "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10CBM2-270x250.jpg"
+        
+        
+        
+        let prodcut4 = Product()
+        prodcut4.name = "10mm recessed edge wall board"
+        prodcut4.imageURL =  "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10SBM2-270x250.jpg"
+        
+        
+        let prodcut5 = Product()
+        prodcut5.name = "10mm recessed edge Water Resistant Plasterboard"
+        prodcut5.imageURL = "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10REM2-270x250.jpg"
+        
+        
+        
+        let prodcut6 = Product()
+        prodcut6.name = "13mm Perforated Plasterboard"
+        prodcut6.imageURL = "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/10WRM2-270x250.jpg"
+        
+        
+        let prodcut7 = Product()
+        prodcut7.name = "13mm recessed edge Fire Resistant Plasterboard"
+        prodcut7.imageURL =  "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13PERM2-270x250.jpg"
+        
+        
+        let prodcut8 = Product()
+        prodcut8.name = "13mm recessed edge Sound Proof Plasterboard"
+        prodcut8.imageURL = "http://www.humeplaster.com.au/hume/wp-content/uploads/2016/09/13SBM2-270x250.jpg"
+        
+        
+        
+        let productList = [prodcut1,prodcut2,prodcut3,prodcut4,prodcut5,prodcut6,prodcut7,prodcut8]
+        
+        return productList
+    }
+    
+    
+    
+//    func createSearchBar() {
+//
+//        searchBar = UISearchBar(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(320), height: CGFloat(44)))
+//        searchBar?.showsCancelButton = true
+//        searchBar?.delegate = self
+//
+//
+//
+//
+//
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
+    
+    
     /*
     // MARK: - Navigation
 
