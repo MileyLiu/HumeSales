@@ -42,7 +42,6 @@
 		16D502D22008680600E878C5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D12008680600E878C5 /* Product.swift */; };
 		16D502D420086DFE00E878C5 /* Button+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D320086DFE00E878C5 /* Button+Image.swift */; };
 		16D502D8200878A200E878C5 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D502D7200878A200E878C5 /* ProductCollectionViewCell.swift */; };
-		16DE13B2200EA37700090E18 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DE13B1200EA37700090E18 /* QRCodeViewController.swift */; };
 		A7588BFA87D613CFBBACB92A /* Pods_Hume_Sales.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCCBF75AEC9CECD30652674 /* Pods_Hume_Sales.framework */; };
 		FB2FAAC9ABCDDC25FB822665 /* Pods_Hume_SalesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95429F81053E387132EB0EEA /* Pods_Hume_SalesTests.framework */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,7 @@
 		1649675420048E1200B84D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1649675620048E1200B84D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1649675920048E1200B84D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1649675B20048E1200B84D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1649675B20048E1200B84D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/mileyliu/Hume Sales/Hume Sales/Assets.xcassets"; sourceTree = "<absolute>"; };
 		1649675E20048E1200B84D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1649676020048E1200B84D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1649676520048E1200B84D21 /* Hume SalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hume SalesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +106,6 @@
 		16D502D12008680600E878C5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		16D502D320086DFE00E878C5 /* Button+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Image.swift"; sourceTree = "<group>"; };
 		16D502D7200878A200E878C5 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		16DE13B1200EA37700090E18 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		3DDCDFA9B291454354AE3894 /* Pods-Hume SalesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesTests/Pods-Hume SalesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D635656E995F40FB6E95F9F /* Pods-Hume Sales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume Sales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hume Sales/Pods-Hume Sales.debug.xcconfig"; sourceTree = "<group>"; };
 		85B73AD14486855777CF46EA /* Pods-Hume SalesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hume SalesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hume SalesUITests/Pods-Hume SalesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				16D502B02005CFDC00E878C5 /* LoginViewController.swift */,
 				16D502B32006BDD900E878C5 /* SignupViewController.swift */,
 				161420CC200DB34100BAAB60 /* ScanQrCodeViewController.swift */,
-				16DE13B1200EA37700090E18 /* QRCodeViewController.swift */,
 				16D502B52006BDEF00E878C5 /* ResetPswViewController.swift */,
 			);
 			path = Login;
@@ -612,7 +609,6 @@
 				161420CB200C772F00BAAB60 /* DesignableTextField.swift in Sources */,
 				161420CD200DB34100BAAB60 /* ScanQrCodeViewController.swift in Sources */,
 				16D502BA2006CA3F00E878C5 /* QuoteViewController.swift in Sources */,
-				16DE13B2200EA37700090E18 /* QRCodeViewController.swift in Sources */,
 				16D502D0200867E800E878C5 /* ProductsListViewController.swift in Sources */,
 				16D502C12006E48A00E878C5 /* TaskViewController.swift in Sources */,
 				161420C9200C4AFC00BAAB60 /* FileTableViewCell.swift in Sources */,

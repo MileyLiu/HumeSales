@@ -15,6 +15,10 @@ class ScanQrCodeViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var scanView: UIView!
+    
+  
+    @IBOutlet weak var scanLineCon: NSLayoutConstraint!
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -37,20 +41,31 @@ class ScanQrCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.clear
+//        startAnimation()
+//        beginScanning()
+ 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.startAnimation()
+        self.beginScanning()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    
+    
+    func beginScanning()  {
+        
+      
         
         // Get the back-facing camera for capturing videos
-       
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
-        
- 
         
         let captureDevice = AVCaptureDevice.default(for: .video)
-       
         
-//        guard let captureDevice = deviceDiscoverySession.devices.first else {
-//            print("Failed to get the camera device")
-//            return
-//        }
         do {
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.
             let input = try AVCaptureDeviceInput(device: captureDevice!)
@@ -76,6 +91,8 @@ class ScanQrCodeViewController: UIViewController {
             print("error:\(error)")
             return
         }
+        
+        
         // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -87,7 +104,8 @@ class ScanQrCodeViewController: UIViewController {
         
         // Move the message label and top bar to the front
         view.bringSubview(toFront: messageLabel)
-            view.bringSubview(toFront: closeButton)
+        view.bringSubview(toFront: closeButton)
+//        view.bringSubview(toFront: scanView)
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
         
@@ -98,78 +116,32 @@ class ScanQrCodeViewController: UIViewController {
             view.bringSubview(toFront: qrCodeFrameView)
         }
         
-        
-        
-//        if #available(iOS 10.2, *) {
-//            let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//
-//
-//        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
-//        // as the media type parameter.
-//        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-//
-//
-//        do {
-//            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-//            let input = try AVCaptureDeviceInput(device: captureDevice!)
-//
-//            // Initialize the captureSession object.
-//            captureSession = AVCaptureSession()
-//            // Set the input device on the capture session.
-//            captureSession?.addInput(input)
-//
-//            // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-//            let captureMetadataOutput = AVCaptureMetadataOutput()
-//            captureSession?.addOutput(captureMetadataOutput)
-//
-//            // Set delegate and use the default dispatch queue to execute the call back
-//            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//
-//            // Detect all the supported bar code
-//            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
-//
-//            // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-//            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-//            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//            videoPreviewLayer?.frame = view.layer.bounds
-//            view.layer.addSublayer(videoPreviewLayer!)
-//
-//            // Start video capture
-//            captureSession?.startRunning()
-//            print(" Start video capture")
-//
-//            // Move the message label to the top view
-//            view.bringSubview(toFront: messageLabel)
-//            view.bringSubview(toFront: closeButton )
-//
-//            // Initialize QR Code Frame to highlight the QR code
-//            qrCodeFrameView = UIView()
-//
-//
-//
-//            if let qrCodeFrameView = qrCodeFrameView {
-//                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-//                qrCodeFrameView.layer.borderWidth = 2
-//                view.addSubview(qrCodeFrameView)
-//                view.bringSubview(toFront: qrCodeFrameView)
-//
-//
-//
-//            }
-//
-//        } catch {
-//            // If any error occurs, simply print it out and don't continue any more.
-//            print("qrcode:\(error)")
-//            return
-//        }
-//
- 
     }
-
     
+    func drawLayer(){
+        
+        
+        
+    }
+    
+    
+    func startAnimation(){
+        
+        self.scanLineCon.constant = 0
+        self.view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 2.0) {
+            self.scanLineCon.constant = 100
+            
+            UIView.setAnimationRepeatCount(100)
+            
+            self.view.layoutIfNeeded()
+        }
+        
+        
+        
+        
+    }
     
     @IBAction func close(_ sender: Any) {
         
@@ -213,6 +185,9 @@ class ScanQrCodeViewController: UIViewController {
             }
         }
     }
+    
+    
+
     
     
 //    func launchApp(decodedURL: String) {
@@ -273,6 +248,9 @@ extension ScanQrCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             if metadataObj.stringValue != nil {
 //                launchApp(decodedURL: metadataObj.stringValue!)
                 messageLabel.text = metadataObj.stringValue
+                
+                
+                
             }
         }
     }
